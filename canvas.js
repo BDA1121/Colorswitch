@@ -156,9 +156,11 @@ canvas.addEventListener("click", function() {
 var colors = ['red', 'yellow', 'blue','purple'];
  var col = colors[Math.floor(Math.random()*4)];
  var cols;
+	var coll;
  var checkin = true;
  function check(){
  	if(col === "blue"){
+		coll = -200;
          if(y > 0 && y < Math.PI/2){
          	cols = Math.PI*3/2;
          }  		
@@ -166,6 +168,7 @@ var colors = ['red', 'yellow', 'blue','purple'];
 		 cols = -(Math.PI/2);}
 	}
 	else if(col === "red"){
+		coll = 100;
 		 if(y>Math.PI*3/2 && y < Math.PI*2){
 		 	cols = -(Math.PI);
 		 }
@@ -173,9 +176,10 @@ var colors = ['red', 'yellow', 'blue','purple'];
 		 cols = (Math.PI);}
 	}
 	else if(col === "purple"){
+		coll = -100;
 		cols = (Math.PI/2);
 	}
-	else{
+	else{coll = 0;
 		cols = 0;
 	}
 	if(checkin){
@@ -218,7 +222,7 @@ if( !(y + cols > Math.PI*3/2 && y + cols < Math.PI*2 - Math.PI/180) ){
         
 }
 		else if(z + 4*x > 300*li+x-20 && z+4*x < 300*li+x ){
-	if(!(0+l > 110&&0+l<190)){
+	if(!(0+l+coll > 110&&0+l+coll<190)){
      gameover();
 	}
 }
@@ -680,9 +684,11 @@ window.addEventListener("keydown", function(event) {
 var colors2 = ['red', 'yellow', 'blue','purple'];
  var col2 = colors2[Math.floor(Math.random()*4)];
  var cols2;
+	var coll2;
  var checkin2 = true;
  function check2(){
  	if(col2 === "blue"){
+		coll2 = -200;
          if(y2 > 0 && y2 < Math.PI/2){
          	cols2 = Math.PI*3/2;
          }  		
@@ -690,6 +696,7 @@ var colors2 = ['red', 'yellow', 'blue','purple'];
 		 cols2 = -(Math.PI/2);}
 	}
 	else if(col2 === "red"){
+		coll2 = 100;
 		 if(y2>Math.PI*3/2 && y2 < Math.PI*2){
 		 	cols2 = -(Math.PI);
 		 }
@@ -697,9 +704,10 @@ var colors2 = ['red', 'yellow', 'blue','purple'];
 		 cols2 = (Math.PI);}
 	}
 	else if(col2 === "purple"){
+		coll2 = -100;
 		cols2 = (Math.PI/2);
 	}
-	else{
+	else{coll2 = 0;
 		cols2 = 0;
 	}
 	if(checkin2){
@@ -742,7 +750,7 @@ if( !(y2 + cols2 > Math.PI*3/2 && y2 + cols2 < Math.PI*2 - Math.PI/180) ){
         
 }
 else if(z2 + 4*x2 > 300*li2+x-20 && z2+4*x2 < 300*li2+x2 ){
-	if(!(0+l2 > 110&&0+l2<190)){
+	if(!(0+l2+coll2 > 110&&0+l2+coll2<190)){
      gameover();
 	}
 }
