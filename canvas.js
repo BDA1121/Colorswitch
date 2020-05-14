@@ -283,9 +283,9 @@ var xa = 1;
 	 if(localStorage.his < Math.round(x/10)){
 	   high.textContent = Math.round(x/10);
 	 };
-	 else if(localStorage.his === undefined){
+	 if(localStorage.his === undefined){
 	high.textContent = Math.round(x/10);
-	 }
+	 };
  	h2.textContent = Math.round(x/10);
  	ctx.clearRect(0, 0,canvas.width,  canvas.height); 
  	check();
