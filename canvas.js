@@ -282,6 +282,9 @@ var xa = 1;
  function hop(){
 	 if(localStorage.his < Math.round(x/10)){
 	   high.textContent = Math.round(x/10);
+	 };
+	 else if(localStorage.his === undefined){
+	high.textContent = Math.round(x/10);
 	 }
  	h2.textContent = Math.round(x/10);
  	ctx.clearRect(0, 0,canvas.width,  canvas.height); 
@@ -462,82 +465,8 @@ ctx.beginPath();
         ctx.strokeStyle = 'purple';
         ctx.lineWidth = 10;
         ctx.stroke();
-
-/*    ctx.moveTo(140 , 0+x );
-    ctx.lineTo( 65 + (75 - 75*Math.cos(y)), 0 +x  - 75*Math.sin(y));
-    ctx.lineWidth = 10;
-    ctx.strokeStyle = 'yellow';
-    ctx.stroke();
-    ctx.beginPath();
-    ctx.moveTo(140 , 0+x);
-    ctx.lineTo(215 - (75 - 75*Math.cos(y)), 0 + x+ 75*Math.sin(y));
-    ctx.lineWidth = 10;
-    ctx.strokeStyle = 'red';
-    ctx.stroke();
-    ctx.beginPath();
-    ctx.moveTo(140,0+x);
-    ctx.lineTo(140 + 75*Math.sin(y), -75 + x+ (75 - 75*Math.cos(y)));
-    ctx.lineWidth = 10;
-    ctx.strokeStyle = 'purple';
-    ctx.stroke();
-    ctx.beginPath();
-    ctx.moveTo(140,0+x);
-    ctx.lineTo(140 - 75*Math.sin(y), 75+x - (75 - 75*Math.cos(y)));
-    ctx.lineWidth = 10;
-    ctx.strokeStyle = 'blue';
-    ctx.stroke();
-    ctx.beginPath();
-    ctx.moveTo(250 , 0+x);
-    ctx.lineTo(200 + (50 - 50*Math.cos(y)), 0+x + 50*Math.sin(y));
-    ctx.lineWidth = 10;
-    ctx.strokeStyle = 'red';
-    ctx.stroke();
-    ctx.beginPath();
-    ctx.moveTo(250 , 0+x);
-    ctx.lineTo(300 - (50 - 50*Math.cos(y)), 0+x - 50*Math.sin(y));
-    ctx.lineWidth = 10;
-    ctx.strokeStyle = 'yellow';
-    ctx.stroke();
-    ctx.beginPath();
-    ctx.moveTo(250,0+x);
-    ctx.lineTo(250- 50*Math.sin(y), -50+x+ (50 - 50*Math.cos(y)));
-    ctx.lineWidth = 10;
-    ctx.strokeStyle = 'purple';
-    ctx.stroke();
-    ctx.beginPath();
-    ctx.moveTo(250,0+x);
-    ctx.lineTo(250+ 50*Math.sin(y), 50+x- (50 - 50*Math.cos(y)));
-    ctx.lineWidth = 10;
-    ctx.strokeStyle = 'blue	';
-    ctx.stroke();*/
 }
-
 function square(y){
-	/*
-	ctx.beginPath();
-	ctx.moveTo(200 - 70.71*Math.sin(y), -100 + x - (70.71 - 70.71*Math.cos(y)));
-    ctx.lineTo(129.29 + (70.71 - 70.71*Math.cos(y)), -170.71 +x  - 70.71*Math.sin(y));
-    ctx.strokeStyle = 'yellow';
-    ctx.stroke();
-    ctx.beginPath();
-    ctx.moveTo(129.29 + (70.71 - 70.71*Math.cos(y)), -170.71 +x  - 70.71*Math.sin(y));
-    ctx.lineTo(200 + 70.71*Math.sin(y), -241.42 + x+ (70.71 - 70.71*Math.cos(y)));
-    ctx.lineWidth = 10;
-    ctx.strokeStyle = 'purple';
-    ctx.stroke();
-    ctx.beginPath();
-    ctx.moveTo(200 + 70.71*Math.sin(y), -241.42 + x+ (70.71 - 70.71*Math.cos(y)));
-    ctx.lineTo(270.71 - (70.71 - 70.71*Math.cos(y)), -170.71 + x+ 70.71*Math.sin(y));
-    ctx.lineWidth = 10;
-    ctx.strokeStyle = 'red';
-    ctx.stroke();
-    ctx.beginPath();
-    ctx.moveTo(270.71 - (70.71 - 70.71*Math.cos(y)), -170.71 + x+ 70.71*Math.sin(y));
-    ctx.lineTo(200 - 70.71*Math.sin(y), -100 + x - (70.71 - 70.71*Math.cos(y)));
-    ctx.lineWidth = 10;
-    ctx.strokeStyle = 'blue';
-    ctx.stroke();*/
-
 }
 square(y);
 lines();
@@ -563,54 +492,6 @@ ctx.beginPath();
         ctx.lineWidth = 10;
         ctx.stroke();
         ctx.beginPath(); 
-	/*ctx.beginPath();
-	ctx.moveTo(-151+l,-400+x);
-	ctx.lineTo(-50+l,-400+x);
-	ctx.lineWidth = 30;
-	ctx.strokeStyle = 'yellow';
-	ctx.stroke();
-	ctx.beginPath();
-	ctx.moveTo(-50+l,-400+x);
-	ctx.lineTo(25+l,-400+x);
-	ctx.strokeStyle = 'red';
-	ctx.lineWidth = 30;
-	ctx.stroke();
-	ctx.beginPath();
-	ctx.moveTo(25+l,-400+x);
-	ctx.lineTo(100+l,-400+x);
-	ctx.strokeStyle = 'blue';
-	ctx.lineWidth = 30;
-	ctx.stroke();
-	ctx.beginPath();
-	ctx.moveTo(100+l,-400+x);
-	ctx.lineTo(175+l,-400+x);
-	ctx.strokeStyle = 'yellow';
-	ctx.lineWidth = 30;
-	ctx.stroke();
-	ctx.beginPath();
-	ctx.moveTo(175+l,-400+x);
-	ctx.lineTo(250+l,-400+x);
-	ctx.strokeStyle = 'red';
-	ctx.lineWidth = 30;
-	ctx.stroke();
-	ctx.beginPath();
-	ctx.moveTo(250+l,-400+x);
-	ctx.lineTo(325+l,-400+x);
-	ctx.strokeStyle = 'purple';
-    ctx.lineWidth = 30;
-	ctx.stroke();
-	ctx.beginPath();
-	ctx.moveTo(325+l,-400+x);
-	ctx.lineTo(400+l,-400+x);
-	ctx.strokeStyle = 'yellow';
-	ctx.lineWidth = 30;
-	ctx.stroke();
-	ctx.beginPath();
-	ctx.moveTo(400+l,-400+x);
-	ctx.lineTo(500+l,-400+x);
-	ctx.strokeStyle = 'blue';
-	ctx.lineWidth = 30;
-	ctx.stroke();*/
 }
 }
 function multiplayer(){
