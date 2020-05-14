@@ -217,6 +217,11 @@ if( !(y + cols > Math.PI*3/2 && y + cols < Math.PI*2 - Math.PI/180) ){
         
         
 }
+		else if(z + 4*x > 300*li+x-20 && z+4*x < 300*li+x ){
+	if(!(0+l > 110&&0+l<190)){
+     gameover();
+	}
+}
 else if(z +4*x > -150 + -1500*p1 + x && z +4*x < -130+ -1500*p1  + x){
        	col = colors[Math.floor(Math.random()*4)];
        	p1 -= 3;
@@ -307,18 +312,22 @@ var xa = 1;
       xa += 0.1;
       rot -= 0.2;  
       if(v === obsy){
-      	v -= 3;
+      	v -= 4;
       }
       else if(n === obsy){
-      	n -= 3;
+      	n -= 4;
       }
       else if(c === obsy){
-      	c -= 3;
+      	c -= 4;
       }
+	else if(li === obsy){
+      	li -= 4;
+      }    
       obsy--;
     }
 
 }
+	var l = 0;
  circle = ctx.arc(200, z, 10, 0, Math.PI*2)
  ctx.fillStyle = col;
         ctx.fill(circle);
@@ -342,6 +351,10 @@ var rot = 50;
         		y = 0;
         		y += Math.PI/180;
         	}
+		l++;
+		if(l === 400){
+		  l = 0;
+		}
         }
 var n,v,c;
 var pownum = [];
@@ -358,14 +371,15 @@ p3 = 2- pp;
 }
 
 var num = [];
-for (var i = 1; i >-2; i--) {
+for (var i = 1; i >-3; i--) {
 	num.push(i);
 }
 shuffle(num);
-
+var li;
 n = num[0];
 v = num[1];
 c = num[2];
+li = num[3];
 function shuffle(array) {
     var a = array.length;
     var t, i;
@@ -491,7 +505,54 @@ ctx.beginPath();
         ctx.strokeStyle = 'red';
         ctx.lineWidth = 10;
         ctx.stroke();
-        ctx.beginPath(); 
+        ctx.beginPath();ctx.beginPath();
+	ctx.moveTo(0+l,300*li+x);
+	ctx.lineTo(100+l,300*li+x);
+	ctx.lineWidth = 30;
+	ctx.strokeStyle = 'yellow';
+	ctx.stroke();
+	ctx.beginPath();
+	ctx.moveTo(100+l,300*li+x);
+	ctx.lineTo(200+l,300*li+x);
+	ctx.strokeStyle = 'red';
+	ctx.lineWidth = 30;
+	ctx.stroke();
+	ctx.beginPath();
+	ctx.moveTo(200+l,300*li+x);
+	ctx.lineTo(300+l,300*li+x);
+	ctx.strokeStyle = 'blue';
+	ctx.lineWidth = 30;
+	ctx.stroke();
+	ctx.beginPath();
+	ctx.moveTo(300+l,300*li+x);
+	ctx.lineTo(400+l,300*li+x,);
+	ctx.strokeStyle = 'purple';
+	ctx.lineWidth = 30;
+	ctx.stroke();
+	ctx.beginPath();
+	ctx.moveTo(-400+l,300*li+x);
+	ctx.lineTo(-300+l,300*li+x);
+	ctx.lineWidth = 30;
+	ctx.strokeStyle = 'yellow';
+	ctx.stroke();
+	ctx.beginPath();
+	ctx.moveTo(-300+l,300*li+x);
+	ctx.lineTo(-200+l,300*li+x);
+	ctx.strokeStyle = 'red';
+	ctx.lineWidth = 30;
+	ctx.stroke();
+	ctx.beginPath();
+	ctx.moveTo(-200+l,300*li+x);
+	ctx.lineTo(-100+l,300*li+x);
+	ctx.strokeStyle = 'blue';
+	ctx.lineWidth = 30;
+	ctx.stroke();
+	ctx.beginPath();
+	ctx.moveTo(-100+l,300*li+x);
+	ctx.lineTo(0+l,300*li+x,);
+	ctx.strokeStyle = 'purple';
+	ctx.lineWidth = 30;
+	ctx.stroke(); 
 }
 }
 function multiplayer(){
@@ -680,6 +741,11 @@ if( !(y2 + cols2 > Math.PI*3/2 && y2 + cols2 < Math.PI*2 - Math.PI/180) ){
         
         
 }
+else if(z2 + 4*x2 > 300*li2+x-20 && z2+4*x2 < 300*li2+x2 ){
+	if(!(0+l2 > 110&&0+l2<190)){
+     gameover();
+	}
+}
 else if(z2 +4*x2 > -150 + -1500*p12 + x2 && z2 +4*x2 < -130+ -1500*p12  + x2){
        	col2 = colors2[Math.floor(Math.random()*4)];
        	p12 -= 3;
@@ -701,6 +767,7 @@ else if(z2 +4*x2 > -150 + -1500*p12 + x2 && z2 +4*x2 < -130+ -1500*p12  + x2){
         }
 }
 }
+var l2,li2;
 var flypow2;
 function fly2(){
 	z2 -= 4;
@@ -764,13 +831,16 @@ var xa2 = 1;
       xa2 += 0.1;
       rot2 -= 0.2;  
       if(v2 === obsy2){
-      	v2 -= 3;
+      	v2 -= 4;
       }
       else if(n2 === obsy2){
-      	n2-= 3;
+      	n2-= 4;
       }
       else if(c2 === obsy2){
-      	c2 -= 3;
+      	c2 -= 4;
+      }
+	    else if(li2 === obsy2){
+      	li2 -= 4;
       }
       obsy2--;
     }
@@ -799,6 +869,10 @@ var rot2 = 50;
         		y2 = 0;
         		y2 += Math.PI/180;
         	}
+		l2++;
+		if(l2 === 400){
+		l2 === 0;
+		}
         }
 var n2,v2,c2;
 var pownum2 = [];
@@ -815,7 +889,7 @@ p32 = 2- pp2;
 }
 
 var num2 = [];
-for (var i = 1; i >-2; i--) {
+for (var i = 1; i >-3; i--) {
 	num2.push(i);
 }
 shuffle(num2);
@@ -823,6 +897,7 @@ shuffle(num2);
 n2 = num2[0];
 v2 = num2[1];
 c2 = num2[2];
+li2 = num2[3];
 function shuffle(array) {
     var a = array.length;
     var t, i;
@@ -949,4 +1024,51 @@ ctx2.beginPath();
         ctx2.lineWidth = 10;
         ctx2.stroke();
         ctx2.beginPath(); 
+	ctx.moveTo(0+l2,300*li2+x2);
+	ctx.lineTo(100+l2,300*li2+x2);
+	ctx.lineWidth = 30;
+	ctx.strokeStyle = 'yellow';
+	ctx.stroke();
+	ctx.beginPath();
+	ctx.moveTo(100+l2,300*li2+x2);
+	ctx.lineTo(200+l2,300*li2+x2);
+	ctx.strokeStyle = 'red';
+	ctx.lineWidth = 30;
+	ctx.stroke();
+	ctx.beginPath();
+	ctx.moveTo(200+l2,300*li2+x2);
+	ctx.lineTo(300+l2,300*li2+x2);
+	ctx.strokeStyle = 'blue';
+	ctx.lineWidth = 30;
+	ctx.stroke();
+	ctx.beginPath();
+	ctx.moveTo(300+l2,300*li2+x2);
+	ctx.lineTo(400+l2,300*li2+x2);
+	ctx.strokeStyle = 'purple';
+	ctx.lineWidth = 30;
+	ctx.stroke();
+	ctx.beginPath();
+	ctx.moveTo(-400+l2,300*li2+x2);
+	ctx.lineTo(-300+l2,300*li2+x2);
+	ctx.lineWidth = 30;
+	ctx.strokeStyle = 'yellow';
+	ctx.stroke();
+	ctx.beginPath();
+	ctx.moveTo(-300+l2,300*li2+x2);
+	ctx.lineTo(-200+l2,300*li2+x2);
+	ctx.strokeStyle = 'red';
+	ctx.lineWidth = 30;
+	ctx.stroke();
+	ctx.beginPath();
+	ctx.moveTo(-200+l2,300*li2+x2);
+	ctx.lineTo(-100+l2,300*li2+x2);
+	ctx.strokeStyle = 'blue';
+	ctx.lineWidth = 30;
+	ctx.stroke();
+	ctx.beginPath();
+	ctx.moveTo(-100+l2,300*li2+x2);
+	ctx.lineTo(0+l2,300*li2+x2);
+	ctx.strokeStyle = 'purple';
+	ctx.lineWidth = 30;
+	ctx.stroke();
 }}
