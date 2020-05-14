@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>asd</title>
+<style type="text/css">
+	canvas{position: absolute;
+		left: 500px;
+		top: 50px;
+width: x	px;
+height: px;
+background-color: black;
+border: 2px solid black;
+	}
+	body{
+		background-image: linear-gradient(to right, rgb(255, 0, 255),rgb(224, 17, 95));
+		margin: 0;
+		margin-top: 0px;
+	}
+	#canvas2{
+		position: absolute;
+		left: 1000px;
+		top: 50;
+	}
+h1{
+	position: absolute;
+		left: 820px;
+		top: 50px;
+        color: blue;
+}
+#img{
+	position: absolute;
+	left:520px;
+	top:70px;
+	width: 30px;
+	height: 30px;
+}
+#img2{
+	position: absolute;
+	left:1020px;
+	top:70px;
+	width: 30px;
+	height: 30px;
+}
+h2{
+	position: absolute;
+		left: 850px;
+		top: 90px;
+        color: blue;
+}
+h3{
+	text-align: center;
+	font-size:30px;
+	margin: 0px auto;
+}
+p{
+	font-size: 20px;
+}
+div{padding-left: 10px;
+	width: 500px;
+	float: left;
+	font-size: 30px;
+}
+.infoo{
+	display: none;
+}
+button{
+	margin-top: 10px;
+	margin-bottom: 10px;
+	background: blue;
+	height: 30px;
+	width: 150px;
+}
+.h22{
+	position: absolute;
+	left: 1350;
+	top: 50;
+}
+#h22{
+	position: absolute;
+	left: 1350px;
+    top: 90px;
+}
+</style>
+</head>
+<body>
+	<div>
+		     <img src="info.png" id="info" style="width:30px; height: 30px;margin-top: 50px;margin-left: 10px;">
+		     <div id="infos" class="infoo">
+	<p>	<img src="picture2.png" style="width:40px; height: 40px;margin-left: 5px;"> MultiColor ball :- pass through any obstacle for 20seconds</p>
+		<p>	<img src="picture4.png" style="width:40px; height: 40px;margin-left: 5px;"> Color change ball:- Changes color of the ball </p>
+			<p>	<img src="picture3.png" style="width:40px; height: 40px;margin-left: 5px;"> Rocket ball:- passes through 4 obstacles at once </p>
+			<p>For player 1 use left mouse click to move the ball</p>
+			<p>For player 2 use Up Arrow Key to move the ball</p>
+</div>
+<div>
+	<button id="single" >Single player</button>
+</div>
+<div>
+	<button id="multi">Multi player</button>
+</div>
+<div>High Score</div>
+<div id="high"></div>
+	</div>
+	<h3>Game</h3>
+<canvas>
+</canvas>
+<canvas id="canvas2" class="infoo"></canvas>
+<img id="img" src="images.png">
+<img id="img2" src="images.png">
+<h1>Score</h1>
+<h2></h2>
+<h1 class="h22">Score</h1>
+<h2 id="h22"></h2>
+<script type="text/javascript" src="canvas.js"></script>
+</body>
+</html>
