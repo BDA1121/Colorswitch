@@ -777,7 +777,7 @@ window.addEventListener("keydown", function(event) {
  		go2(y2);
  		xp2(y2);
  		square2(y2);
- 		lines2();	
+ 		lines2(y2);	
  	ctx2.beginPath();
  	circle2 = ctx2.arc(200, z2 + 4*x2, 10, 0, Math.PI*2);
         ctx2.fillStyle = col2;
@@ -897,8 +897,8 @@ function fly2(){
         ctx2.fill();
     go2(y2);
     xp2(y2);
-    lines2();
-    square2(y); 
+    lines2(y2);
+    square2(y2); 
     ctx2.clearRect(0, 0,canvas.width,  canvas.height); 
 }
 function checkins2(){
@@ -939,7 +939,7 @@ var xa2 = 1;
         ctx2.fill();
     go2(y2);
     xp2(y2);
-    lines2();
+    lines2(y2);
     square2(y2);
     power22();
     power32();
@@ -1124,8 +1124,8 @@ ctx2.beginPath();
 function square2(y2){
 }
 square2(y2);
-lines2();
-function lines2(){
+lines2(y2);
+function lines2(y2){
 	  ctx2.beginPath();
     ctx2.arc(200,300*c2 + x2,75, 0 - y2, Math.PI*3/2 - y2, true );
         ctx2.strokeStyle = 'blue';
