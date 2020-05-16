@@ -886,7 +886,8 @@ else if(z2 +4*x2 > -150 + -1500*p12 + x2 && z2 +4*x2 < -130+ -1500*p12  + x2){
         }
 }
 }
-var l2,li2;
+var l2 = 0;
+var li2;
 var flypow2;
 function fly2(){
 	z2 -= 4;
