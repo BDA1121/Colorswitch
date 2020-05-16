@@ -860,7 +860,7 @@ else if(z2 + 4*x2 > 300*li2+x2-20 && z2+4*x2 < 300*li2+x2 ){
      gameover();
 	}
 }
-else if(z2 + 4*x2 > 300*lii2+x-20 && z2+4*x2 < 300*lii2+x2 ){
+else if(z2 + 4*x2 > 300*lii2+x2-20 && z2+4*x2 < 300*lii2+x2 ){
 	if(!(0+l2+coll2 > 110&&0+l2+coll2<190)){
      gameover();
 	}
@@ -1261,8 +1261,8 @@ ctx2.beginPath();
 	ctx2.lineWidth = 30;
 	ctx2.stroke();
 	ctx2.beginPath();
-	ctx2.moveTo(300+l2,300*lii+50+l2/2+x2);
-	ctx2.lineTo(400+l2,300*lii+100+l2/2+x2);
+	ctx2.moveTo(300+l2,300*lii2+50+l2/2+x2);
+	ctx2.lineTo(400+l2,300*lii2+100+l2/2+x2);
 	ctx2.strokeStyle = 'purple';
 	ctx2.lineWidth = 30;
 	ctx2.stroke();
