@@ -1150,6 +1150,7 @@ ctx2.beginPath();
 	ctx2.beginPath();
 	ctx2.moveTo(0+l2,300*li2+x2);
 	ctx2.lineTo(100+l2,300*li2+x2);
+	console.log(l2);
 	ctx2.lineWidth = 30;
 	ctx2.strokeStyle = 'yellow';
 	ctx2.stroke();
