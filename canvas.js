@@ -1020,7 +1020,7 @@ n2 = num2[0];
 v2 = num2[1];
 c2 = num2[2];
 li2 = num2[3];
-lii2 = num[4];
+lii2 = num2[4];
 function shuffle(array) {
     var a = array.length;
     var t, i;
