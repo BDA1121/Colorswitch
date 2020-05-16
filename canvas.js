@@ -857,12 +857,12 @@ if( !(y2 + cols2 > Math.PI*3/2 && y2 + cols2 < Math.PI*2 - Math.PI/180) ){
 }
 else if(z2 + 4*x2 > 300*li2+x2-20 && z2+4*x2 < 300*li2+x2 ){
 	if(!(0+l2+coll2 > 110&&0+l2+coll2<190)){
-     gameover();
+     gameover2();
 	}
 }
 else if(z2 + 4*x2 > 300*lii2+x2-20 && z2+4*x2 < 300*lii2+x2 ){
 	if(!(0+l2+coll2 > 110&&0+l2+coll2<190)){
-     gameover();
+     gameover2();
 	}
 }
 else if(z2 +4*x2 > -150 + -1500*p12 + x2 && z2 +4*x2 < -130+ -1500*p12  + x2){
