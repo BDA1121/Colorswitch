@@ -1011,7 +1011,7 @@ p32 = 2- pp2;
 }
 
 var num2 = [];
-for (var i = 1; i >-3; i--) {
+for (var i = 1; i >-4; i--) {
 	num2.push(i);
 }
 shuffle(num2);
